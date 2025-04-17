@@ -49,13 +49,71 @@ This project simulates how a SIEM works by:
 ```bash
 git clone https://github.com/rohittpillai/siem-dashboard.git
 cd siem-dashboard
+```
 
-### 2. Create the backend folder and set up Flask:
+### 2. Start backend (Flask + MongoDB)
 ```bash
 cd backend
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 python app.py
+```
+
+###3. Start frontend (Next.js)
+```bash
+cd ../frontend
+npm install
+npm run dev
+```
+
+###4. Start MongoDB using Docker
+```bash
+docker run -d -p 27017:27017 --name siem-mongo mongo
+```
+
+## 📡 API Endpoints
+
+| Method | Route         | Description                       |
+|--------|---------------|-----------------------------------|
+| GET    | `/`           | API health check                  |
+| POST   | `/ingest-log` | Send JSON log data for processing |
+
+---
+
+## 🧠 Learning Goals
+
+- Understand how SIEM tools ingest, analyze, and respond to security data  
+- Build a full-stack app with security and observability in mind  
+- Integrate third-party threat intelligence APIs  
+- Deploy a scalable and modular architecture  
+
+---
+
+## 🗺️ Roadmap
+
+- [ ] Custom Rule Editor in UI  
+- [ ] Exportable incident reports (PDF)  
+- [ ] Admin control panel  
+- [ ] Multi-user auth system  
+- [ ] WebSocket-based live alert updates  
+- [ ] Hosted deployment (Vercel + Fly.io or Render)  
+
+---
+
+## 👨‍💻 Author
+
+**Rohit Pillai**  
+[GitHub](https://github.com/rohittpillai)
+
+---
+
+## 📃 License
+
+This project is licensed under the MIT License.
+
+> ⭐ Star this repo if you find it useful or inspiring!
+
+
 
 
