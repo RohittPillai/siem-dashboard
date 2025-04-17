@@ -49,3 +49,13 @@ This project simulates how a SIEM works by:
 ```bash
 git clone https://github.com/rohittpillai/siem-dashboard.git
 cd siem-dashboard
+
+### 2. Create the backend folder and set up Flask:
+```bash
+cd backend
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+python app.py
+
+
