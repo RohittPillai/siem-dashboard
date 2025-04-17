@@ -47,5 +47,5 @@ This project simulates how a SIEM works by:
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/siem-dashboard.git
+git clone https://github.com/rohittpillai/siem-dashboard.git
 cd siem-dashboard
